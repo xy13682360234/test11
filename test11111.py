@@ -11,10 +11,8 @@ import requests
 app = Flask(__name__)
 import decimal
 import re
-
 import datetime
 import json
-
 # 解决jsonify中文乱码
 class Config(object):
     DEBUG = True
@@ -63,10 +61,6 @@ class mysqltest():
     cursor = db.cursor()
     # 带字段名称的游标
     cursor = db.cursor(cursor=pymysql.cursors.DictCursor)
-
-
-
-
 @app.route('/url_for/')
 def url_for_demo():
     return 'url_for_demo'
